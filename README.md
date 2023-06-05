@@ -3,7 +3,7 @@
 
 #### By Valentina Perez and Patricia Martins
 
-#### Have you heard of the Super Mario Music Mixer website? It's a really fun way to play with your favorite Mario characters like Mario, Luigi, Yoshi, Princess Peach, and Bowser. All you have to do is drag and drop them onto the stage, and they'll start playing instruments! It's so cool to see them jamming together and making some awesome tunes. Give it a try!
+Have you heard of the Super Mario Music Mixer website? It's a really fun way to play with your favorite Mario characters like Mario, Luigi, Yoshi, Princess Peach, and Bowser. All you have to do is drag and drop them onto the stage, and they'll start playing instruments! It's so cool to see them jamming together and making some awesome tunes. Give it a try!
 
 ## Installation
 
