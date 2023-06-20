@@ -45,6 +45,16 @@ html {
 
 /* 2. ---Mobile Library Grid Styles--- */
 
+
+.copyright {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+
 .full-width-grid-con {
   display: grid;
   grid-template-columns: 1fr minmax(0, 767px) 1fr;
@@ -346,6 +356,10 @@ html {
 /* 4. ---Desktop Library Grid Styles--- */
 
 @media screen and (min-width: 1200px) {
+
+  .copyright {
+    font-size: 18px;
+  }
 
   .full-width-grid-con {
     display: grid;
