@@ -361,6 +361,29 @@ html {
     font-size: 18px;
   }
 
+  .box-characters {
+    height: 450px;
+    background-color: #4D4D4D;
+    color: white;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .box-bgimage {
+    height: 450px;
+    background-color: #4D4D4D;
+    color: white;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+
   .full-width-grid-con {
     display: grid;
     grid-template-columns: 1fr minmax(0, 1919px) 1fr;
