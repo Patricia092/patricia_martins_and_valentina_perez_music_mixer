@@ -5,6 +5,7 @@
     2.  Flexbox Items 
     3.  Header
     4.  Footer
+    5. modal
 
 
  */
@@ -128,60 +129,60 @@ header {
 .itens {
     color: #fff;
     text-decoration: none;
-   
+
 }
 
-.itens a{
+.itens a {
     color: #fff;
-   
+
 }
 
 .ul-nav {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
     margin-top: 20px;
-    
+
 }
 
 a i {
-	transition: all 0.3s linear;
+    transition: all 0.3s linear;
 }
 
 a:hover i {
-	transform: scale(1);
-	color: white;
+    transform: scale(1);
+    color: white;
 }
 
 .ul-nav a {
-	text-decoration: none;
-	font-size: 18px;
+    text-decoration: none;
+    font-size: 18px;
 }
 
 .li-animation li {
-	display: inline-block;
-	position: relative;
-	color: white;
+    display: inline-block;
+    position: relative;
+    color: white;
     margin-right: 40px;
 }
 
 .li-animation li::after {
-	content: '';
-	position: absolute;
-	width: 100%;
-	transform: scaleX(0);
-	height: 3px;
-	bottom: 0;
-	left: 0;
-	background-color: white;
-	transform-origin: bottom right;
-	transition: transform 0.25s ease-out;
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
 }
 
 .li-animation li:hover::after {
-	transform: scaleX(1);
-	transform-origin: bottom left;
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 
@@ -195,8 +196,72 @@ footer {
     margin-top: 120px;
     background-color: #E60012;
 }
+
 /* ---End of Footer--- */
 
+/* 4. ---Modal--- */
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #0057B8;
+    color: white;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+}
+
+.modal-text {
+    margin-top: 30px;
+}
+
+/* The Close Button */
+
+.closeInfo {
+    position: relative;
+    top: 10px;
+    left: 95%;
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.closeInfo:hover,
+.closeInfo:focus {
+    color: #E60012;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.closeCred {
+    position: relative;
+    top: 10px;
+    left: 95%;
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.closeCred:hover,
+.closeCred:focus {
+    color: #FFDF02;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 
-
+/* ---End of Modal--- */
