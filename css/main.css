@@ -105,16 +105,7 @@ section p {
     justify-content: space-around;
 }
 
-.instruments-image {
-    background-color: rgb(255, 255, 255);
-    border: solid 1px ;
-    padding: 2px;
-    text-align: center;
-    width: 130px;
-    height: 130px;
-    margin-top: 15px;
-    margin-right: 10px;
-}
+
 
 
 /* ---End of Flexbox Items--- */
@@ -198,8 +189,21 @@ a:hover i {
 
 /* 5. ---Instruments--- */
 
+
+
 .instruments-image {
-	display: block;
+    width: 100px;
+    height: 100px;
+}
+.instruments-box {
+    background-color: rgb(255, 255, 255);
+    border: solid 1px ;
+    padding: 2px;
+    width: 130px;
+    height: 130px;
+    margin-top: 15px;
+    margin-right: 10px;
+    display: block;
 	padding: 8px;
 	cursor: pointer;
 }
