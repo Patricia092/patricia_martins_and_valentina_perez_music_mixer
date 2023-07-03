@@ -4,8 +4,10 @@
     1.  General Styles (Normalize)
     2.  Flexbox Items 
     3.  Header
-    4.  Footer
-    5. modal
+    4. Characters
+    5. Instruments
+    6.  Footer
+    7. modal
 
 
  */
@@ -76,7 +78,7 @@ section p {
     margin-right: 10px;
 }
 
-.flex-container-characters {
+.characters-space {
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -95,7 +97,7 @@ section p {
     border-style: dotted;
 }
 
-.flex-container-characters-buttons {
+.instruments {
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -103,8 +105,9 @@ section p {
     justify-content: space-around;
 }
 
-.flexbox-characters-buttons {
-    background-color: rgb(98, 185, 203);
+.instruments-image {
+    background-color: rgb(255, 255, 255);
+    border: solid 1px ;
     padding: 2px;
     text-align: center;
     width: 130px;
@@ -115,6 +118,7 @@ section p {
 
 
 /* ---End of Flexbox Items--- */
+
 
 /* 3. ---Header--- */
 
@@ -188,8 +192,22 @@ a:hover i {
 
 /* ---End of Header--- */
 
+/* 4. ---Characters--- */
 
-/* 4. ---Footer--- */
+/* ---End of Characters--- */
+
+/* 5. ---Instruments--- */
+
+.instruments-image {
+	display: block;
+	padding: 8px;
+	cursor: pointer;
+}
+
+/* ---End of Instruments--- */
+
+
+/* 6. ---Footer--- */
 
 
 footer {
@@ -199,7 +217,7 @@ footer {
 
 /* ---End of Footer--- */
 
-/* 4. ---Modal--- */
+/* 7. ---Modal--- */
 
 /* The Modal (background) */
 .modal {

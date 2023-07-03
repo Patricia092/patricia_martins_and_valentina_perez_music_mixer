@@ -1,7 +1,50 @@
 console.log("It is working!");
 
 
-// modal  information features
+// Drag and drop functionality
+const characterSpace = document.querySelector(".characters-space"),
+    instruments = document.querySelectorAll(".instruments img"),
+    instrumentsImg = document.querySelectorAll(".instruments-image img"),
+    dropZones = document.querySelectorAll(".flexbox-characters");
+
+let draggedInstrument;
+
+function handleStartDrag() {
+    draggedInstrument = this;
+}
+
+function handleDragOver(e) {
+
+    e.preventDefault();
+
+    console.log("dragged over me")
+
+}
+
+function handleDrop(e) {
+    debugger;
+    e.preventDefault();
+
+    console.log("dropped something on me");
+    // This line moves the dragged piece from the left side of the board
+    // into whatever dropzone we choose.
+
+    // if (this.children.length >= 1) {
+    //     return;
+    // }
+    this.appendChild(draggedInstrument);
+
+}
+
+instruments.forEach(instrument => instrument.addEventListener("dragstart", handleStartDrag));
+
+dropZones.forEach(zone => zone.addEventListener("dragover", handleDragOver));
+
+dropZones.forEach(zone => zone.addEventListener("drop", handleDrop));
+
+
+
+// modal  information functionality
 
 // Get the modal
 const modalInfo = document.getElementById("modalInfo"),
