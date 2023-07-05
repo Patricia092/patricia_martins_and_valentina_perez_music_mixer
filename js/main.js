@@ -1,6 +1,6 @@
 console.log("It is working!");
 
-
+//variables
 // Drag and drop functionality
 const characterSpace = document.querySelector(".characters-space"),
     instruments = document.querySelectorAll(".instruments img"),
@@ -8,6 +8,8 @@ const characterSpace = document.querySelector(".characters-space"),
     dropZones = document.querySelectorAll(".flexbox-characters");
 
 let draggedInstrument;
+
+//Functions
 
 function handleStartDrag() {
     draggedInstrument = this;
@@ -36,11 +38,51 @@ function handleDrop(e) {
 
 }
 
+// Event Listeners
+
 instruments.forEach(instrument => instrument.addEventListener("dragstart", handleStartDrag));
 
 dropZones.forEach(zone => zone.addEventListener("dragover", handleDragOver));
 
 dropZones.forEach(zone => zone.addEventListener("drop", handleDrop));
+
+
+// Audios
+
+// Variables
+
+const music = document.querySelector('.track-ref'),
+    audioEl = document.querySelector('audio'),
+    playButton = document.querySelector('.playButton'),
+    pauseButton = document.querySelector('.pauseButton'),
+    rewindButton = document.querySelector('.rewindButton'),
+    volSlider = document.querySelector('.volumeControl');
+
+
+
+// functions
+
+function playAudio(id) {
+    let audio = document.getElementById(id);
+    audio.load();
+    audio.play();
+}
+
+function restartAudio(id) {
+    let audio = document.getElementById(id);
+    audio.currentTime = 0;
+    playAudio(id);
+}
+
+function pauseAudio(id) {
+    let audio = document.getElementById(id);
+    audio.pause();
+}
+
+function setVol(e,id) {
+    let audio = document.getElementById(id);
+    audio.volume = (e.value / 100);
+}
 
 
 

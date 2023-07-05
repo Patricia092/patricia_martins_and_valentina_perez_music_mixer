@@ -46,22 +46,78 @@
         </section>
         <section class="grid-con">
             <h2 class="hidden">Image background and characters</h2>
+
             <div class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12 box-bgimage">
                 <div class="characters-space">
-                    <div class="flexbox-characters"></div>
-                    <div class="flexbox-characters"></div>
-                    <div class="flexbox-characters"></div>
-                    <div class="flexbox-characters"></div>
-                    <div class="flexbox-characters "></div>
+                    <div class="flexbox-characters">
+                        <div data-trackref="music_stem_saxophone" class="track-ref">
+                            <audio id="audio1" src="audio/music_stem_saxophone.mp3" loop></audio>
+                            <div class="audio-controls">
+                                <button class="playButton" onclick="playAudio('audio1')">Play</button>
+                                <button class="pauseButton" onclick="pauseAudio('audio1')">Pause</button>
+                                <button class="rewindButton" onclick="restartAudio('audio1')">Rewind</button>
+                                <input type="range" onchange="setVol(this,'audio1')" class="volumeControl" min="0" max="100" step="1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flexbox-characters">
+                        <div data-trackref="music_stem_guitar" class="track-ref">
+                            <audio id="audio2" src="audio/music_stem_guitar.mp3" loop></audio>
+                            <div class="audio-controls">
+                                <button class="playButton" onclick="playAudio('audio2')">Play</button>
+                                <button class="pauseButton" onclick="pauseAudio('audio2')">Pause</button>
+                                <button class="rewindButton" onclick="restartAudio('audio2')">Rewind</button>
+                                <input type="range" onchange="setVol(this,'audio2')" class="volumeControl" min="0" max="100" step="1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flexbox-characters">
+                        <div data-trackref="music_stem_flute" class="track-ref">
+                            <audio id="audio3" src="audio/music_stem_flute.mp3" loop></audio>
+                            <div class="audio-controls">
+                                <button class="playButton" onclick="playAudio('audio3')">Play</button>
+                                <button class="pauseButton" onclick="pauseAudio('audio3')">Pause</button>
+                                <button class="rewindButton" onclick="restartAudio('audio3')">Rewind</button>
+                                <input type="range" onchange="setVol(this,'audio3')" class="volumeControl" min="0" max="100" step="1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flexbox-characters">
+                        <div data-trackref="music_stem_maracas" class="track-ref">
+                            <audio id="audio4" src="audio/music_stem_maracas.mp3" loop></audio>
+                            <div class="audio-controls">
+                                <button class="playButton" onclick="playAudio('audio4')">Play</button>
+                                <button class="pauseButton" onclick="pauseAudio('audio4')">Pause</button>
+                                <button class="rewindButton" onclick="restartAudio('audio4')">Rewind</button>
+                                <input type="range" onchange="setVol(this,'audio4')" class="volumeControl" min="0" max="100" step="1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flexbox-characters">
+                        <div data-trackref="music_stem_drums" class="track-ref">
+                            <audio id="audio5" src="audio/music_stem_drums.mp3" loop></audio>
+                            <div class="audio-controls">
+                                <button class="playButton" onclick="playAudio('audio5')">Play</button>
+                                <button class="pauseButton" onclick="pauseAudio('audio5')">Pause</button>
+                                <button class="rewindButton" onclick="restartAudio('audio5')">Rewind</button>
+                                <input type="range" onchange="setVol(this,'audio5')" class="volumeControl" min="0" max="100" step="1">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12">
                 <div class="instruments">
-                    <div class="instruments-box"><img src="images/saxophone.svg" class="instruments-image" alt="top left"></div>
-                    <div class="instruments-box"><img src="images/guitar.svg" class="instruments-image" alt="top right"></div>
-                    <div class="instruments-box"><img src="images/flute.svg" class="instruments-image" alt="bottom left"></div>
-                    <div class="instruments-box"><img src="images/maracas.svg" class="instruments-image" alt="bottom right"></div>
-                    <div class="instruments-box"><img src="images/drum.svg" class="instruments-image" alt="bottom right"></div> 
+                    <div class="instruments-box"><img src="images/guitar.svg" class="instruments-image" alt="top left">
+                    </div>
+                    <div class="instruments-box"><img src="images/saxophone.svg" class="instruments-image"
+                            alt="top right"></div>
+                    <div class="instruments-box"><img src="images/flute.svg" class="instruments-image"
+                            alt="bottom left"></div>
+                    <div class="instruments-box"><img src="images/maracas.svg" class="instruments-image"
+                            alt="bottom right"></div>
+                    <div class="instruments-box"><img src="images/drum.svg" class="instruments-image"
+                            alt="bottom right"></div>
                 </div>
             </div>
         </section>
