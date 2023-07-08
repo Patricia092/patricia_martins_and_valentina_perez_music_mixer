@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0eab0f8aa6.js" crossorigin="anonymous"></script>
     <link rel=" shortcut icon" href="./images/favicon_1.ico">
     <link rel="stylesheet" href="css/main.css">
     <link href="css/grid.css" rel="stylesheet">
@@ -41,8 +42,11 @@
     </header>
     <main>
 
-        <section class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12 box">
-            <h2>Buttons, and title</h2>
+        <section class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12 pipe">
+            <h2 class="hidden">Title</h2>
+            <img src="images/pipe_left.png" alt="" width="80" height="80">
+            <img src="images/super_mario_logo.png" alt="Super Mario Logo" width="120" height="60" class="title">
+            <img src="images/pipe_right.png" alt="" width="80" height="80">
         </section>
         <section class="grid-con">
             <h2 class="hidden">Image background and characters</h2>
@@ -50,13 +54,20 @@
             <div class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12 box-bgimage">
                 <div class="characters-space">
                     <div class="flexbox-characters">
-                        <div data-trackref="music_stem_saxophone" class="track-ref">
-                            <audio id="audio1" src="audio/music_stem_saxophone.mp3" loop></audio>
-                            <div class="audio-controls">
-                                <button class="playButton" onclick="playAudio('audio1')">Play</button>
-                                <button class="pauseButton" onclick="pauseAudio('audio1')">Pause</button>
-                                <button class="rewindButton" onclick="restartAudio('audio1')">Rewind</button>
-                                <input type="range" onchange="setVol(this,'audio1')" class="volumeControl" min="0" max="100" step="1">
+                        <div class="control">
+                            <!-- <div class="myChar">Hover over me</div> -->
+                            <div data-trackref="music_stem_saxophone" class="track-ref hide">
+                                <audio id="audio1" src="audio/music_stem_saxophone.mp3" loop></audio>
+                                <div class="audio-controls">
+                                    <button class="playButton button-style button-s" onclick="playAudio('audio1')"><i
+                                            class="fa-solid fa-play"></i></button>
+                                    <button class="pauseButton button-style button-s" onclick="pauseAudio('audio1')"><i
+                                            class="fa-solid fa-pause"></i></button>
+                                    <button class="rewindButton button-style button-s" onclick="stopAudio('audio1')"><i
+                                            class="fa-solid fa-xmark"></i></button>
+                                    <input type="range" onchange="setVol(this,'audio1')" class="volumeControl" min="0"
+                                        max="100" step="1">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -64,10 +75,14 @@
                         <div data-trackref="music_stem_guitar" class="track-ref">
                             <audio id="audio2" src="audio/music_stem_guitar.mp3" loop></audio>
                             <div class="audio-controls">
-                                <button class="playButton" onclick="playAudio('audio2')">Play</button>
-                                <button class="pauseButton" onclick="pauseAudio('audio2')">Pause</button>
-                                <button class="rewindButton" onclick="restartAudio('audio2')">Rewind</button>
-                                <input type="range" onchange="setVol(this,'audio2')" class="volumeControl" min="0" max="100" step="1">
+                                <button class="playButton button-style button-s" onclick="playAudio('audio2')"><i
+                                        class="fa-solid fa-play"></i></button>
+                                <button class="pauseButton button-style button-s" onclick="pauseAudio('audio2')"><i
+                                        class="fa-solid fa-pause"></i></button>
+                                <button class="rewindButton button-style button-s" onclick="stopAudio('audio2')"><i
+                                        class="fa-solid fa-xmark"></i></button>
+                                <input type="range" onchange="setVol(this,'audio2')" class="volumeControl" min="0"
+                                    max="100" step="1">
                             </div>
                         </div>
                     </div>
@@ -75,10 +90,14 @@
                         <div data-trackref="music_stem_flute" class="track-ref">
                             <audio id="audio3" src="audio/music_stem_flute.mp3" loop></audio>
                             <div class="audio-controls">
-                                <button class="playButton" onclick="playAudio('audio3')">Play</button>
-                                <button class="pauseButton" onclick="pauseAudio('audio3')">Pause</button>
-                                <button class="rewindButton" onclick="restartAudio('audio3')">Rewind</button>
-                                <input type="range" onchange="setVol(this,'audio3')" class="volumeControl" min="0" max="100" step="1">
+                                <button class="playButton button-style button-s" onclick="playAudio('audio3')"><i
+                                        class="fa-solid fa-play"></i></button>
+                                <button class="pauseButton button-style button-s" onclick="pauseAudio('audio3')"><i
+                                        class="fa-solid fa-pause"></i></button>
+                                <button class="rewindButton button-style button-s" onclick="stopAudio('audio3')"><i
+                                        class="fa-solid fa-xmark"></i></button>
+                                <input type="range" onchange="setVol(this,'audio3')" class="volumeControl" min="0"
+                                    max="100" step="1">
                             </div>
                         </div>
                     </div>
@@ -86,10 +105,14 @@
                         <div data-trackref="music_stem_maracas" class="track-ref">
                             <audio id="audio4" src="audio/music_stem_maracas.mp3" loop></audio>
                             <div class="audio-controls">
-                                <button class="playButton" onclick="playAudio('audio4')">Play</button>
-                                <button class="pauseButton" onclick="pauseAudio('audio4')">Pause</button>
-                                <button class="rewindButton" onclick="restartAudio('audio4')">Rewind</button>
-                                <input type="range" onchange="setVol(this,'audio4')" class="volumeControl" min="0" max="100" step="1">
+                                <button class="playButton button-style button-s" onclick="playAudio('audio4')"><i
+                                        class="fa-solid fa-play"></i></button>
+                                <button class="pauseButton button-style button-s" onclick="pauseAudio('audio4')"><i
+                                        class="fa-solid fa-pause"></i></button>
+                                <button class="rewindButton button-style button-s" onclick="stopAudio('audio4')"><i
+                                        class="fa-solid fa-xmark"></i></button>
+                                <input type="range" onchange="setVol(this,'audio4')" class="volumeControl" min="0"
+                                    max="100" step="1">
                             </div>
                         </div>
                     </div>
@@ -97,10 +120,14 @@
                         <div data-trackref="music_stem_drums" class="track-ref">
                             <audio id="audio5" src="audio/music_stem_drums.mp3" loop></audio>
                             <div class="audio-controls">
-                                <button class="playButton" onclick="playAudio('audio5')">Play</button>
-                                <button class="pauseButton" onclick="pauseAudio('audio5')">Pause</button>
-                                <button class="rewindButton" onclick="restartAudio('audio5')">Rewind</button>
-                                <input type="range" onchange="setVol(this,'audio5')" class="volumeControl" min="0" max="100" step="1">
+                                <button class="playButton button-style button-s" onclick="playAudio('audio5')"><i
+                                        class="fa-solid fa-play"></i></button>
+                                <button class="pauseButton button-style button-s" onclick="pauseAudio('audio5')"><i
+                                        class="fa-solid fa-pause"></i></button>
+                                <button class="rewindButton button-style button-s" onclick="restartAudio('audio5')"><i
+                                        class="fa-solid fa-xmark"></i></button>
+                                <input type="range" onchange="setVol(this,'audio5')" class="volumeControl" min="0"
+                                    max="100" step="1">
                             </div>
                         </div>
                     </div>
