@@ -357,6 +357,17 @@ html {
 
 @media screen and (min-width: 1200px) {
 
+  .title {
+    text-align: center;
+    margin: 10px;
+  }
+
+  .pipe {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0 8px 0;
+  }
+
   .copyright {
     font-size: 18px;
   }
@@ -374,13 +385,11 @@ html {
 
   .box-bgimage {
     height: 450px;
-    background-color: #4D4D4D;
+    background-color: #caf1ff;
     color: white;
     border-radius: 5px;
     padding: 20px;
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
   }
 
 

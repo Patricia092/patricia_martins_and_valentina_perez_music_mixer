@@ -38,6 +38,18 @@ function handleDrop(e) {
 
 }
 
+function stop() {
+
+    dropZones.forEach(d => {
+
+        if (d.children.length >= 1) {
+            puzzlePieceDiv[0].appendChild(d.children[0]);
+        }
+
+    });
+
+}
+
 // Event Listeners
 
 instruments.forEach(instrument => instrument.addEventListener("dragstart", handleStartDrag));
@@ -68,10 +80,10 @@ function playAudio(id) {
     audio.play();
 }
 
-function restartAudio(id) {
+function stopAudio(id) {
     let audio = document.getElementById(id);
+    audio.pause();
     audio.currentTime = 0;
-    playAudio(id);
 }
 
 function pauseAudio(id) {
