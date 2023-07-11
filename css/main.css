@@ -53,6 +53,12 @@ textarea {
     padding: 0px;
 }
 
+ul,
+li {
+    margin: 0px;
+    padding: 0px;  
+}
+
 section h2,
 section h3,
 section p {
@@ -68,7 +74,7 @@ section p {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .flexbox-header {
@@ -125,6 +131,10 @@ header {
 
 }
 
+.pipe-left {
+    padding-left: 0px !important;
+}
+
 .itens a {
     color: #fff;
 
@@ -132,11 +142,17 @@ header {
 
 .ul-nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     list-style-type: none;
-    margin-top: 20px;
+    margin-top: 10px;
 
+}
+
+.li-none {
+    pointer-events: none;
+    padding: 0px !important;
+    margin: 0px !important;
 }
 
 a i {
@@ -151,6 +167,7 @@ a:hover i {
 .ul-nav a {
     text-decoration: none;
     font-size: 18px;
+    font-weight: 600;
 }
 
 .li-animation li {
