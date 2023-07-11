@@ -53,80 +53,97 @@
 
             <div class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12 box-bgimage">
                 <div class="characters-space">
-                    <div class="flexbox-characters">
-                        <div class="control">
-                            <!-- <div class="myChar">Hover over me</div> -->
-                            <div data-trackref="music_stem_saxophone" class="track-ref hide">
-                                <audio id="audio1" src="audio/music_stem_saxophone.mp3" loop></audio>
-                                <div class="audio-controls">
-                                    <button class="playButton button-style button-s" onclick="playAudio('audio1')"><i
-                                            class="fa-solid fa-play"></i></button>
-                                    <button class="pauseButton button-style button-s" onclick="pauseAudio('audio1')"><i
-                                            class="fa-solid fa-pause"></i></button>
-                                    <button class="rewindButton button-style button-s" onclick="stopAudio('audio1')"><i
-                                            class="fa-solid fa-xmark"></i></button>
-                                    <input type="range" onchange="setVol(this,'audio1')" class="volumeControl" min="0"
-                                        max="100" step="1">
-                                </div>
+                    <div class="flexbox-characters" id="div1">
+                        <div class="girl-box">
+                            <img src="images/girl.svg" alt="girl" width="100px" height="300px" id="imagediv1"
+                                class="hidden-char">
+                        </div>
+                        <div data-trackref="music_stem_saxophone" class="track-ref hide">
+                            <audio id="audiodiv1" src="audio/music_stem_saxophone.mp3" loop></audio>
+                            <div class="audio-controls">
+                                <button class="playButton button-style button-s" onclick="playAudio('div1')"><i
+                                        class="fa-solid fa-play"></i></button>
+                                <button class="pauseButton button-style button-s" onclick="pauseAudio('div1')"><i
+                                        class="fa-solid fa-pause"></i></button>
+                                <button class="rewindButton button-style button-s" onclick="stopAudio('div1')"><i
+                                        class="fa-solid fa-xmark"></i></button>
+                                <input type="range" onchange="setVol(this,'div1')" class="volumeControl" min="0"
+                                    max="100" step="1">
                             </div>
                         </div>
                     </div>
-                    <div class="flexbox-characters">
+                    <div class="flexbox-characters" id="div2">
+                        <div class="girl-box">
+                            <img src="images/girl.svg" alt="girl" width="100px" height="300px" id="imagediv2"
+                                class="hidden-char">
+                        </div>
                         <div data-trackref="music_stem_guitar" class="track-ref">
-                            <audio id="audio2" src="audio/music_stem_guitar.mp3" loop></audio>
+                            <audio id="audiodiv2" src="audio/music_stem_guitar.mp3" loop></audio>
                             <div class="audio-controls">
-                                <button class="playButton button-style button-s" onclick="playAudio('audio2')"><i
+                                <button class="playButton button-style button-s" onclick="playAudio('div2')"><i
                                         class="fa-solid fa-play"></i></button>
-                                <button class="pauseButton button-style button-s" onclick="pauseAudio('audio2')"><i
+                                <button class="pauseButton button-style button-s" onclick="pauseAudio('div2')"><i
                                         class="fa-solid fa-pause"></i></button>
-                                <button class="rewindButton button-style button-s" onclick="stopAudio('audio2')"><i
+                                <button class="rewindButton button-style button-s" onclick="stopAudio('div2')"><i
                                         class="fa-solid fa-xmark"></i></button>
-                                <input type="range" onchange="setVol(this,'audio2')" class="volumeControl" min="0"
+                                <input type="range" onchange="setVol(this,'div2')" class="volumeControl" min="0"
                                     max="100" step="1">
                             </div>
                         </div>
                     </div>
-                    <div class="flexbox-characters">
+                    <div class="flexbox-characters" id="div3">
+                        <div class="girl-box">
+                            <img src="images/girl.svg" alt="girl" width="100px" height="300px" id="imagediv3"
+                                class="hidden-char">
+                        </div>
                         <div data-trackref="music_stem_flute" class="track-ref">
-                            <audio id="audio3" src="audio/music_stem_flute.mp3" loop></audio>
+                            <audio id="audiodiv3" src="audio/music_stem_flute.mp3" loop></audio>
                             <div class="audio-controls">
-                                <button class="playButton button-style button-s" onclick="playAudio('audio3')"><i
+                                <button class="playButton button-style button-s" onclick="playAudio('div3')"><i
                                         class="fa-solid fa-play"></i></button>
-                                <button class="pauseButton button-style button-s" onclick="pauseAudio('audio3')"><i
+                                <button class="pauseButton button-style button-s" onclick="pauseAudio('div3')"><i
                                         class="fa-solid fa-pause"></i></button>
-                                <button class="rewindButton button-style button-s" onclick="stopAudio('audio3')"><i
+                                <button class="rewindButton button-style button-s" onclick="stopAudio('div3')"><i
                                         class="fa-solid fa-xmark"></i></button>
-                                <input type="range" onchange="setVol(this,'audio3')" class="volumeControl" min="0"
+                                <input type="range" onchange="setVol(this,'div3')" class="volumeControl" min="0"
                                     max="100" step="1">
                             </div>
                         </div>
                     </div>
-                    <div class="flexbox-characters">
+                    <div class="flexbox-characters" id="div4">
+                        <div class="girl-box">
+                            <img src="images/girl.svg" alt="girl" width="100px" height="300px" id="imagediv4"
+                                class="hidden-char">
+                        </div>
                         <div data-trackref="music_stem_maracas" class="track-ref">
-                            <audio id="audio4" src="audio/music_stem_maracas.mp3" loop></audio>
+                            <audio id="audiodiv4" src="audio/music_stem_maracas.mp3" loop></audio>
                             <div class="audio-controls">
-                                <button class="playButton button-style button-s" onclick="playAudio('audio4')"><i
+                                <button class="playButton button-style button-s" onclick="playAudio('div4')"><i
                                         class="fa-solid fa-play"></i></button>
-                                <button class="pauseButton button-style button-s" onclick="pauseAudio('audio4')"><i
+                                <button class="pauseButton button-style button-s" onclick="pauseAudio('div4')"><i
                                         class="fa-solid fa-pause"></i></button>
-                                <button class="rewindButton button-style button-s" onclick="stopAudio('audio4')"><i
+                                <button class="rewindButton button-style button-s" onclick="stopAudio('div4')"><i
                                         class="fa-solid fa-xmark"></i></button>
-                                <input type="range" onchange="setVol(this,'audio4')" class="volumeControl" min="0"
+                                <input type="range" onchange="setVol(this,'div4')" class="volumeControl" min="0"
                                     max="100" step="1">
                             </div>
                         </div>
                     </div>
-                    <div class="flexbox-characters">
+                    <div class="flexbox-characters" id="div5">
+                        <div class="girl-box">
+                            <img src="images/girl.svg" alt="girl" width="100px" height="300px" id="imagediv5"
+                                class="hidden-char">
+                        </div>
                         <div data-trackref="music_stem_drums" class="track-ref">
-                            <audio id="audio5" src="audio/music_stem_drums.mp3" loop></audio>
+                            <audio id="audiodiv5" src="audio/music_stem_drums.mp3" loop></audio>
                             <div class="audio-controls">
-                                <button class="playButton button-style button-s" onclick="playAudio('audio5')"><i
+                                <button class="playButton button-style button-s" onclick="playAudio('div5')"><i
                                         class="fa-solid fa-play"></i></button>
-                                <button class="pauseButton button-style button-s" onclick="pauseAudio('audio5')"><i
+                                <button class="pauseButton button-style button-s" onclick="pauseAudio('div5')"><i
                                         class="fa-solid fa-pause"></i></button>
-                                <button class="rewindButton button-style button-s" onclick="restartAudio('audio5')"><i
+                                <button class="rewindButton button-style button-s" onclick="stopAudio('div5')"><i
                                         class="fa-solid fa-xmark"></i></button>
-                                <input type="range" onchange="setVol(this,'audio5')" class="volumeControl" min="0"
+                                <input type="range" onchange="setVol(this,'div5')" class="volumeControl" min="0"
                                     max="100" step="1">
                             </div>
                         </div>
@@ -135,16 +152,21 @@
             </div>
             <div class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12">
                 <div class="instruments">
-                    <div class="instruments-box"><img src="images/guitar.svg" class="instruments-image" alt="top left">
+                    <div class="instruments-box" id="instrumentboxdiv1"><img src="images/saxophone.svg" id="instrumentdiv1"
+                            class="instruments-image" alt="Saxophone">
                     </div>
-                    <div class="instruments-box"><img src="images/saxophone.svg" class="instruments-image"
-                            alt="top right"></div>
-                    <div class="instruments-box"><img src="images/flute.svg" class="instruments-image"
-                            alt="bottom left"></div>
-                    <div class="instruments-box"><img src="images/maracas.svg" class="instruments-image"
-                            alt="bottom right"></div>
-                    <div class="instruments-box"><img src="images/drum.svg" class="instruments-image"
-                            alt="bottom right"></div>
+                    <div class="instruments-box" id="instrumentboxdiv2"><img src="images/guitar.svg"
+                            id="instrumentdiv2" class="instruments-image" alt="Guitar">
+                    </div>
+                    <div class="instruments-box" id="instrumentboxdiv3"><img src="images/flute.svg" id="instrumentdiv3"
+                            class="instruments-image" alt="Flute">
+                    </div>
+                    <div class="instruments-box" id="instrumentboxdiv4"><img src="images/maracas.svg"
+                            id="instrumentdiv4" class="instruments-image" alt="Maracas">
+                    </div>
+                    <div class="instruments-box" id="instrumentboxdiv5"><img src="images/drum.svg" id="instrumentdiv5"
+                            class="instruments-image" alt="Drum">
+                    </div>
                 </div>
             </div>
         </section>

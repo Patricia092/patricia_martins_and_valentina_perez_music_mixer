@@ -1,11 +1,13 @@
-console.log("It is working!");
-
-//variables
-// Drag and drop functionality
 const characterSpace = document.querySelector(".characters-space"),
     instruments = document.querySelectorAll(".instruments img"),
     instrumentsImg = document.querySelectorAll(".instruments-image img"),
-    dropZones = document.querySelectorAll(".flexbox-characters");
+    dropZones = document.querySelectorAll(".flexbox-characters"),
+    music = document.querySelector('.track-ref'),
+    audioEl = document.querySelector('audio'),
+    playButton = document.querySelector('.playButton'),
+    pauseButton = document.querySelector('.pauseButton'),
+    rewindButton = document.querySelector('.rewindButton'),
+    volSlider = document.querySelector('.volumeControl');
 
 let draggedInstrument;
 
@@ -16,86 +18,57 @@ function handleStartDrag() {
 }
 
 function handleDragOver(e) {
-
     e.preventDefault();
-
     console.log("dragged over me")
-
 }
 
 function handleDrop(e) {
-    debugger;
     e.preventDefault();
-
-    console.log("dropped something on me");
-    // This line moves the dragged piece from the left side of the board
-    // into whatever dropzone we choose.
-
-    // if (this.children.length >= 1) {
-    //     return;
-    // }
     this.appendChild(draggedInstrument);
-
+    changeVisibility("image" + draggedInstrument.parentNode.id, true);
+    changeVisibility("instrument" + draggedInstrument.parentNode.id, false);
+    playAudio(draggedInstrument.parentNode.id);
 }
 
-function stop() {
-
-    dropZones.forEach(d => {
-
-        if (d.children.length >= 1) {
-            puzzlePieceDiv[0].appendChild(d.children[0]);
-        }
-
-    });
-
+function changeVisibility(id, show) {
+    if (show) {
+        document.getElementById(id).style.visibility = "visible";
+    } else {
+        document.getElementById(id).style.visibility = "hidden";
+    }
 }
-
-// Event Listeners
-
-instruments.forEach(instrument => instrument.addEventListener("dragstart", handleStartDrag));
-
-dropZones.forEach(zone => zone.addEventListener("dragover", handleDragOver));
-
-dropZones.forEach(zone => zone.addEventListener("drop", handleDrop));
-
-
-// Audios
-
-// Variables
-
-const music = document.querySelector('.track-ref'),
-    audioEl = document.querySelector('audio'),
-    playButton = document.querySelector('.playButton'),
-    pauseButton = document.querySelector('.pauseButton'),
-    rewindButton = document.querySelector('.rewindButton'),
-    volSlider = document.querySelector('.volumeControl');
-
-
-
-// functions
 
 function playAudio(id) {
-    let audio = document.getElementById(id);
+    let audio = document.getElementById("audio" + id);
     audio.load();
     audio.play();
 }
 
 function stopAudio(id) {
-    let audio = document.getElementById(id);
+    let audio = document.getElementById("audio" + id);
     audio.pause();
     audio.currentTime = 0;
+    changeVisibility("image" + id, false);
+    let instrument = document.getElementById("instrument" + id),
+    instrumentBox = document.getElementById("instrumentbox" + id);
+    changeVisibility("instrument" + draggedInstrument.parentNode.id, true);
+    instrumentBox.appendChild(instrument);
 }
 
 function pauseAudio(id) {
-    let audio = document.getElementById(id);
+    let audio = document.getElementById("audio" + id);
     audio.pause();
 }
 
-function setVol(e,id) {
-    let audio = document.getElementById(id);
+function setVol(e, id) {
+    let audio = document.getElementById("audio" + id);
     audio.volume = (e.value / 100);
 }
 
+// Event Listeners
+instruments.forEach(instrument => instrument.addEventListener("dragstart", handleStartDrag));
+dropZones.forEach(zone => zone.addEventListener("dragover", handleDragOver));
+dropZones.forEach(zone => zone.addEventListener("drop", handleDrop));
 
 
 // modal  information functionality
@@ -123,8 +96,6 @@ window.onclick = function (event) {
 }
 
 // modal Credits
-
-
 const modalCred = document.getElementById("modalCred"),
     btnCred = document.getElementById("btn-cred"),
     spanCred = document.getElementsByClassName("closeCred")[0];
