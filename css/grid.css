@@ -173,6 +173,17 @@ html {
     max-width: 1199px;
   }
 
+  .box-bgimage {
+    height: 450px;
+    background-color: #caf1ff;
+    color: white;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+ 
   .m-col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -366,6 +377,16 @@ html {
     display: flex;
     justify-content: space-between;
     margin: 8px 0 8px 0;
+  }
+
+  .characters-box {
+    padding: 2px;
+    width: 215px;
+    height: 400px;
+    margin-top: 15px;
+    margin-right: 10px;
+    border-color: white;
+    border-style: dotted;
   }
 
   .copyright {

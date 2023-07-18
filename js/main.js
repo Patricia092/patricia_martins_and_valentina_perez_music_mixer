@@ -1,7 +1,7 @@
 const characterSpace = document.querySelector(".characters-space"),
     instruments = document.querySelectorAll(".instruments img"),
     instrumentsImg = document.querySelectorAll(".instruments-image img"),
-    dropZones = document.querySelectorAll(".flexbox-characters"),
+    dropZones = document.querySelectorAll(".characters-box"),
     music = document.querySelector('.track-ref'),
     audioEl = document.querySelector('audio'),
     playButton = document.querySelector('.playButton'),

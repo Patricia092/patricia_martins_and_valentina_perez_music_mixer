@@ -92,15 +92,6 @@ section p {
     justify-content: space-around;
 }
 
-.flexbox-characters {
-    padding: 2px;
-    width: 220px;
-    height: 380px;
-    margin-top: 15px;
-    margin-right: 10px;
-    border-color: white;
-    border-style: dotted;
-}
 
 
 .instruments {
@@ -142,11 +133,10 @@ header {
 
 .ul-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     list-style-type: none;
-    margin-top: 10px;
-
+    margin: 10px 0px 10px 0px;
 }
 
 .li-none {
@@ -282,8 +272,10 @@ a:hover i {
 
 
 footer {
-    margin-top: 120px;
+    margin-top: 200px;
     background-color: #E60012;
+    bottom: 0;
+    width: 100%;
 }
 
 /* ---End of Footer--- */
