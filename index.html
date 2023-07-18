@@ -5,12 +5,210 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0eab0f8aa6.js" crossorigin="anonymous"></script>
+    <link rel=" shortcut icon" href="./images/favicon_1.ico">
     <link rel="stylesheet" href="css/main.css">
+    <link href="css/grid.css" rel="stylesheet">
     <title>Music Mixer Home</title>
 </head>
 
 <body>
-    <h1>Mario</h1>
+    <h1 class="hidden">Super Mario Music Mixer</h1>
+    <header>
+        <div class="grid-con">
+            <h2 class="hidden">Mario Music Mixer Header</h2>
+            <article class="col-span-4 m-col-span-12 l-col-start-2 l-col-end-12 xl-col-span-13">
+                <h3 class="hidden">Header Navbar Desktop</h3>
+                <nav>
+                    <h4 class="hidden">Header Navigation Desktop</h4>
+                    <ul class="ul-nav li-animation">
+                        <li class="flexbox-header itens"><a href="#">Home</a></li>
+                        <li class="flexbox-header itens"><a href="#">Music Mixer</a></li>
+                        <li class="li-none"><img src="images/super_mario_logo.png" alt="Super Mario Logo" width="120"
+                        height="60" class="Logo"></li>
+                        <li class="flexbox-header itens"><a href="#" id="btn-info">Information</a></li>
+                        <li class="flexbox-header itens"><a href="#" id="btn-cred">Credits</a></li>
+                    </ul>
+                </nav>
+            </article>
+        </div>
+    </header>
+    <main>
+
+        <section class="grid-con">
+            <h2 class="hidden">Image background and characters</h2>
+            <div class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12 box-bgimage">
+                <div class="characters-space">
+                    <div class="characters-box" id="div1">
+                        <div class="girl-box">
+                            <img src="images/girl.svg" alt="girl" width="100px" height="300px" id="imagediv1"
+                                class="hidden-char">
+                        </div>
+                        <div data-trackref="music_stem_saxophone" class="track-ref hide">
+                            <audio id="audiodiv1" src="audio/music_stem_saxophone.mp3" loop></audio>
+                            <div class="audio-controls">
+                                <button class="playButton button-style button-s" onclick="playAudio('div1')"><i
+                                        class="fa-solid fa-play"></i></button>
+                                <button class="pauseButton button-style button-s" onclick="pauseAudio('div1')"><i
+                                        class="fa-solid fa-pause"></i></button>
+                                <button class="rewindButton button-style button-s" onclick="stopAudio('div1')"><i
+                                        class="fa-solid fa-xmark"></i></button>
+                                <input type="range" onchange="setVol(this,'div1')" class="volumeControl" min="0"
+                                    max="100" step="1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="characters-box" id="div2">
+                        <div class="girl-box">
+                            <img src="images/girl.svg" alt="girl" width="100px" height="300px" id="imagediv2"
+                                class="hidden-char">
+                        </div>
+                        <div data-trackref="music_stem_guitar" class="track-ref">
+                            <audio id="audiodiv2" src="audio/music_stem_guitar.mp3" loop></audio>
+                            <div class="audio-controls">
+                                <button class="playButton button-style button-s" onclick="playAudio('div2')"><i
+                                        class="fa-solid fa-play"></i></button>
+                                <button class="pauseButton button-style button-s" onclick="pauseAudio('div2')"><i
+                                        class="fa-solid fa-pause"></i></button>
+                                <button class="rewindButton button-style button-s" onclick="stopAudio('div2')"><i
+                                        class="fa-solid fa-xmark"></i></button>
+                                <input type="range" onchange="setVol(this,'div2')" class="volumeControl" min="0"
+                                    max="100" step="1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="characters-box" id="div3">
+                        <div class="girl-box">
+                            <img src="images/girl.svg" alt="girl" width="100px" height="300px" id="imagediv3"
+                                class="hidden-char">
+                        </div>
+                        <div data-trackref="music_stem_flute" class="track-ref">
+                            <audio id="audiodiv3" src="audio/music_stem_flute.mp3" loop></audio>
+                            <div class="audio-controls">
+                                <button class="playButton button-style button-s" onclick="playAudio('div3')"><i
+                                        class="fa-solid fa-play"></i></button>
+                                <button class="pauseButton button-style button-s" onclick="pauseAudio('div3')"><i
+                                        class="fa-solid fa-pause"></i></button>
+                                <button class="rewindButton button-style button-s" onclick="stopAudio('div3')"><i
+                                        class="fa-solid fa-xmark"></i></button>
+                                <input type="range" onchange="setVol(this,'div3')" class="volumeControl" min="0"
+                                    max="100" step="1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="characters-box" id="div4">
+                        <div class="girl-box">
+                            <img src="images/girl.svg" alt="girl" width="100px" height="300px" id="imagediv4"
+                                class="hidden-char">
+                        </div>
+                        <div data-trackref="music_stem_maracas" class="track-ref">
+                            <audio id="audiodiv4" src="audio/music_stem_maracas.mp3" loop></audio>
+                            <div class="audio-controls">
+                                <button class="playButton button-style button-s" onclick="playAudio('div4')"><i
+                                        class="fa-solid fa-play"></i></button>
+                                <button class="pauseButton button-style button-s" onclick="pauseAudio('div4')"><i
+                                        class="fa-solid fa-pause"></i></button>
+                                <button class="rewindButton button-style button-s" onclick="stopAudio('div4')"><i
+                                        class="fa-solid fa-xmark"></i></button>
+                                <input type="range" onchange="setVol(this,'div4')" class="volumeControl" min="0"
+                                    max="100" step="1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="characters-box" id="div5">
+                        <div class="girl-box">
+                            <img src="images/girl.svg" alt="girl" width="100px" height="300px" id="imagediv5"
+                                class="hidden-char">
+                        </div>
+                        <div data-trackref="music_stem_drums" class="track-ref">
+                            <audio id="audiodiv5" src="audio/music_stem_drums.mp3" loop></audio>
+                            <div class="audio-controls">
+                                <button class="playButton button-style button-s" onclick="playAudio('div5')"><i
+                                        class="fa-solid fa-play"></i></button>
+                                <button class="pauseButton button-style button-s" onclick="pauseAudio('div5')"><i
+                                        class="fa-solid fa-pause"></i></button>
+                                <button class="rewindButton button-style button-s" onclick="stopAudio('div5')"><i
+                                        class="fa-solid fa-xmark"></i></button>
+                                <input type="range" onchange="setVol(this,'div5')" class="volumeControl" min="0"
+                                    max="100" step="1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-4 m-col-span-12 l-col-span-12 xl-col-span-12">
+                <div class="instruments">
+                    <div class="instruments-box" id="instrumentboxdiv1"><img src="images/saxophone.svg"
+                            id="instrumentdiv1" class="instruments-image" alt="Saxophone">
+                    </div>
+                    <div class="instruments-box" id="instrumentboxdiv2"><img src="images/guitar.svg" id="instrumentdiv2"
+                            class="instruments-image" alt="Guitar">
+                    </div>
+                    <div class="instruments-box" id="instrumentboxdiv3"><img src="images/flute.svg" id="instrumentdiv3"
+                            class="instruments-image" alt="Flute">
+                    </div>
+                    <div class="instruments-box" id="instrumentboxdiv4"><img src="images/maracas.svg"
+                            id="instrumentdiv4" class="instruments-image" alt="Maracas">
+                    </div>
+                    <div class="instruments-box" id="instrumentboxdiv5"><img src="images/drum.svg" id="instrumentdiv5"
+                            class="instruments-image" alt="Drum">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <p class="copyright"> Super Mario Music Mixer &copy; - 2023 All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Here it goes the modals -->
+    <section id="modalInfo" class="modal">
+        <h2 class="hidden">Information modal</h2>
+        <div class="modal-content">
+            <span class="closeInfo">X</span>
+            <div class="modal-text">
+                <p>Some text here telling about the information of the music mixer, below is some lorem ipsum</p>
+                <p>Et harum voluptatem sit omnis laborum ad consectetur expedita qui expedita eius. Et dolore odio non
+                    animi
+                    dolorem sit consequatur quaerat id molestias aliquid ut nihil nesciunt. Quo fuga totam aut
+                    consequatur
+                    consequuntur est cumque consequatur et architecto esse At officiis maxime!
+
+                    Vel perferendis modi et adipisci sapiente aut voluptatem nobis in amet fugiat. Non aliquid provident
+                    33
+                    deleniti tenetur ut inventore voluptatem ea ipsa fuga? Aut voluptatum esse et velit explicabo est
+                    nemo
+                    numquam aut corporis quae! Sed dolor repudiandae ut sint sequi sed dolor rerum non porro omnis.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="modalCred" class="modal">
+        <h2 class="hidden">Credits modal</h2>
+        <div class="modal-content">
+            <span class="closeCred">X</span>
+            <div class="modal-text">
+                <p>Some text here telling about the Credits of the music mixer, below is some lorem ipsum</p>
+                <p>Et harum voluptatem sit omnis laborum ad consectetur expedita qui expedita eius. Et dolore odio non
+                    animi
+                    dolorem sit consequatur quaerat id molestias aliquid ut nihil nesciunt. Quo fuga totam aut
+                    consequatur
+                    consequuntur est cumque consequatur et architecto esse At officiis maxime!
+
+                    Vel perferendis modi et adipisci sapiente aut voluptatem nobis in amet fugiat. Non aliquid provident
+                    33
+                    deleniti tenetur ut inventore voluptatem ea ipsa fuga? Aut voluptatum esse et velit explicabo est
+                    nemo
+                    numquam aut corporis quae! Sed dolor repudiandae ut sint sequi sed dolor rerum non porro omnis.
+                </p>
+            </div>
+        </div>
+    </section>
     <script src="js/main.js"></script>
 </body>
 

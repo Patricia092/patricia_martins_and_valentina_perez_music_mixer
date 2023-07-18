@@ -1,3 +1,348 @@
-.hidden {
-    display: none;
+/* 
+    CSS Guide 
+
+    1.  General Styles (Normalize)
+    2.  Flexbox Items 
+    3.  Header
+    4. Characters
+    5. Instruments
+    6.  Footer
+    7. modal
+
+
+ */
+
+
+/* 1. ---General Styles--- */
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Quicksand', sans-serif;
+    background-image: repeating-linear-gradient(-45deg, #ffffff, #ffffff 6px, #f9f4f4 0, #f9f4f4 12px);
 }
+
+
+img,
+embed,
+object,
+video,
+picture {
+    max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+    transition: all .5s ease-in-out;
+}
+
+input,
+textarea {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul,
+li {
+    margin: 0px;
+    padding: 0px;  
+}
+
+section h2,
+section h3,
+section p {
+    padding-left: 15px;
+}
+
+/* ---End of General Styles--- */
+
+/* 2. Flexbox Items */
+
+.flex-container-header {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flexbox-header {
+    padding: 2px;
+    text-align: center;
+    width: 100px;
+    margin-right: 10px;
+}
+
+.characters-space {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+
+.instruments {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+/* ---End of Flexbox Items--- */
+
+
+/* 3. ---Header--- */
+
+header {
+    background-color: #E60012;
+}
+
+.logo {
+    padding: 8px;
+}
+
+.itens {
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.pipe-left {
+    padding-left: 0px !important;
+}
+
+.itens a {
+    color: #fff;
+
+}
+
+.ul-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    margin: 10px 0px 10px 0px;
+}
+
+.li-none {
+    pointer-events: none;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+a i {
+    transition: all 0.3s linear;
+}
+
+a:hover i {
+    transform: scale(1);
+    color: white;
+}
+
+.ul-nav a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.li-animation li {
+    display: inline-block;
+    position: relative;
+    color: white;
+    margin-right: 40px;
+}
+
+.li-animation li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.li-animation li:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+/* ---End of Header--- */
+
+/* 4. ---Characters--- */
+
+.audio-controls {
+    text-align: center;
+    padding: 0 10px 0 10px;
+}
+
+.track-ref {
+   padding: 8px 0 8px 0;
+    background-color: #ffffff;
+    border-radius: 10px;
+    transition: opacity .2s;
+    display: block;
+    margin: auto;
+    width: 80%;
+}
+
+.volumeControl {
+    margin: 2% 0 0 0;
+    display: inline;
+
+}
+
+.hidden-char {
+    visibility: hidden;
+}
+
+
+
+.button-style {
+    background-color: #f7f7f7;
+    color: #0057B8;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    text-align: center;
+    border: none;
+}
+
+.button-s {
+    border-radius: 50%;
+}
+
+.girl-box {
+    width: 100%;
+    height: 80%;
+    display: block;
+}
+
+#girl {
+    visibility: none;
+}
+
+
+/* ---End of Characters--- */
+
+/* 5. ---Instruments--- */
+
+
+.instruments-image {
+    width: 100px;
+    height: 100px;
+}
+
+.instruments-box {
+    background-color: rgb(255, 255, 255);
+    border: solid 1px;
+    padding: 2px;
+    width: 130px;
+    height: 130px;
+    margin-top: 15px;
+    margin-right: 10px;
+    display: block;
+    padding: 8px;
+    cursor: pointer;
+}
+
+/* ---End of Instruments--- */
+
+
+/* 6. ---Footer--- */
+
+
+footer {
+    margin-top: 200px;
+    background-color: #E60012;
+    bottom: 0;
+    width: 100%;
+}
+
+/* ---End of Footer--- */
+
+/* 7. ---Modal--- */
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #0057B8;
+    color: white;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+}
+
+.modal-text {
+    margin-top: 30px;
+}
+
+/* The Close Button */
+
+.closeInfo {
+    position: relative;
+    top: 10px;
+    left: 95%;
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.closeInfo:hover,
+.closeInfo:focus {
+    color: #E60012;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.closeCred {
+    position: relative;
+    top: 10px;
+    left: 95%;
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.closeCred:hover,
+.closeCred:focus {
+    color: #FFDF02;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* ---End of Modal--- */
