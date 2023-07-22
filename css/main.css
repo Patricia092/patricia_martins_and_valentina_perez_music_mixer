@@ -116,7 +116,7 @@ header {
     padding: 8px;
 }
 
-.itens {
+.items {
     color: #fff;
     text-decoration: none;
 
@@ -126,7 +126,7 @@ header {
     padding-left: 0px !important;
 }
 
-.itens a {
+.items a {
     color: #fff;
 
 }
@@ -312,7 +312,7 @@ footer {
 
 /* The Close Button */
 
-.closeInfo {
+.closeInfo, .closeInstructions, .closeCred {
     position: relative;
     top: 10px;
     left: 95%;
@@ -323,18 +323,16 @@ footer {
 
 .closeInfo:hover,
 .closeInfo:focus {
-    color: #E60012;
+    color: #e7414e;
     text-decoration: none;
     cursor: pointer;
 }
 
-.closeCred {
-    position: relative;
-    top: 10px;
-    left: 95%;
-    color: white;
-    font-size: 26px;
-    font-weight: bold;
+.closeInstructions:hover,
+.closeInstructions:focus {
+    color: #45be7c;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .closeCred:hover,

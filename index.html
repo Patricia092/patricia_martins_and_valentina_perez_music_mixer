@@ -25,12 +25,12 @@
                 <nav>
                     <h4 class="hidden">Header Navigation Desktop</h4>
                     <ul class="ul-nav li-animation">
-                        <li class="flexbox-header itens"><a href="#">Home</a></li>
-                        <li class="flexbox-header itens"><a href="#">Music Mixer</a></li>
+                        <li class="flexbox-header items"><a href="#">Music Mixer</a></li>
+                        <li class="flexbox-header items"><a href="#" id="btn-info">Information</a></li>
                         <li class="li-none"><img src="images/super_mario_logo.png" alt="Super Mario Logo" width="120"
                         height="60" class="Logo"></li>
-                        <li class="flexbox-header itens"><a href="#" id="btn-info">Information</a></li>
-                        <li class="flexbox-header itens"><a href="#" id="btn-cred">Credits</a></li>
+                        <li class="flexbox-header items"><a href="#" id="btn-instructions">Instructions</a></li>
+                        <li class="flexbox-header items"><a href="#" id="btn-cred">Credits</a></li>
                     </ul>
                 </nav>
             </article>
@@ -172,39 +172,54 @@
         <div class="modal-content">
             <span class="closeInfo">X</span>
             <div class="modal-text">
-                <p>Some text here telling about the information of the music mixer, below is some lorem ipsum</p>
-                <p>Et harum voluptatem sit omnis laborum ad consectetur expedita qui expedita eius. Et dolore odio non
-                    animi
-                    dolorem sit consequatur quaerat id molestias aliquid ut nihil nesciunt. Quo fuga totam aut
-                    consequatur
-                    consequuntur est cumque consequatur et architecto esse At officiis maxime!
-
-                    Vel perferendis modi et adipisci sapiente aut voluptatem nobis in amet fugiat. Non aliquid provident
-                    33
-                    deleniti tenetur ut inventore voluptatem ea ipsa fuga? Aut voluptatum esse et velit explicabo est
-                    nemo
-                    numquam aut corporis quae! Sed dolor repudiandae ut sint sequi sed dolor rerum non porro omnis.
+                <p>INFORMATION</p><br>
+                <p>Welcome to the Super Mario Music Mixer!<br><br>
+                    This is a fun project themed after the beloved
+                    Super Mario franchise. We have created an interactive music mixer where you can place several of
+                    the Mario characters on a stage to play a musical instrument! These characters include Mario, 
+                    Luigi, Princess Peach, Toad, and Bowser. Each character will play an audio loop with their 
+                    instrument which can all be combined to create a song!<br><br>
+                    If it is your first time using our music mixer, please click on instructions for details on how 
+                    it works and its features.
                 </p>
             </div>
         </div>
     </section>
+
+    <section id="modalInstructions" class="modal">
+        <h2 class="hidden">Instruction modal</h2>
+        <div class="modal-content">
+            <span class="closeInstructions">X</span>
+            <div class="modal-text">
+                <p>INSTRUCTIONS</p><br>
+                <p>The Super Mario Music Mixer uses drag and drop functionality. Each of the instrument icons at the
+                    bottom of the page are draggable and can be dropped into the bordered area above it.<br><br>
+                    To get started, drag one of the instruments and drop it into the corresponding area. Upon dropping
+                    the instrument, a character will appear with the instrument that you chose and they will begin 
+                    playing an audio loop. As you begin adding more instruments, the loops will combine with each other 
+                    to create a song!<br><br>
+                    You can also adjust each loop individually with the options in the box 
+                    that appears below each character that is currently playing an instrument:<br><br>
+                    - The play button will restart the audio and will also play the audio again if it has been paused<br>
+                    - The pause button will pause the audio<br>
+                    - The X button will stop the audio and remove the character from the stage<br>
+                    - The slider can be used to either lower or increase the volume<br><br>
+                    We hope you enjoy using the Super Mario Music Mixer!
+                </p>
+            </div>
+        </div>
+    </section>
+
     <section id="modalCred" class="modal">
         <h2 class="hidden">Credits modal</h2>
         <div class="modal-content">
             <span class="closeCred">X</span>
             <div class="modal-text">
-                <p>Some text here telling about the Credits of the music mixer, below is some lorem ipsum</p>
-                <p>Et harum voluptatem sit omnis laborum ad consectetur expedita qui expedita eius. Et dolore odio non
-                    animi
-                    dolorem sit consequatur quaerat id molestias aliquid ut nihil nesciunt. Quo fuga totam aut
-                    consequatur
-                    consequuntur est cumque consequatur et architecto esse At officiis maxime!
-
-                    Vel perferendis modi et adipisci sapiente aut voluptatem nobis in amet fugiat. Non aliquid provident
-                    33
-                    deleniti tenetur ut inventore voluptatem ea ipsa fuga? Aut voluptatum esse et velit explicabo est
-                    nemo
-                    numquam aut corporis quae! Sed dolor repudiandae ut sint sequi sed dolor rerum non porro omnis.
+                <p>CREDITS</p><br>
+                <p>The Super Mario Music Mixer was created by:<br><br>
+                    Patricia Martins (Developer)<br>
+                    Valentina Perez (Designer)<br><br>
+                    This is our submission for the Music Mixer project of MMED-1055 Multimedia Authoring 2.
                 </p>
             </div>
         </div>

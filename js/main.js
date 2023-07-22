@@ -95,6 +95,28 @@ window.onclick = function (event) {
     }
 }
 
+// modal Instructions
+const modalInstructions = document.getElementById("modalInstructions"),
+    btnInstructions = document.getElementById("btn-instructions"),
+    spanInstructions = document.getElementsByClassName("closeInstructions")[0];
+
+// When the user clicks the button, open the modal 
+btnInstructions.onclick = function () {
+    modalInstructions.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+spanInstructions.onclick = function () {
+    modalInstructions.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == modalInstructions) {
+        modalInstructions.style.display = "none";
+    }
+}
+
 // modal Credits
 const modalCred = document.getElementById("modalCred"),
     btnCred = document.getElementById("btn-cred"),
