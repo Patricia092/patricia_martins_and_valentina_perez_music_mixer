@@ -4,14 +4,11 @@
     1.  General Styles (Normalize)
     2.  Flexbox Items 
     3.  Header
-    4. Characters
-    5. Instruments
+    4.  Characters
+    5.  Instruments
     6.  Footer
-    7. modal
-
-
+    7.  Modal
  */
-
 
 /* 1. ---General Styles--- */
 
@@ -21,7 +18,6 @@ body {
     font-family: 'Quicksand', sans-serif;
     background-image: repeating-linear-gradient(-45deg, #ffffff, #ffffff 6px, #f9f4f4 0, #f9f4f4 12px);
 }
-
 
 img,
 embed,
@@ -92,8 +88,6 @@ section p {
     justify-content: space-around;
 }
 
-
-
 .instruments {
     margin: 0 auto;
     display: flex;
@@ -101,7 +95,6 @@ section p {
     flex-wrap: wrap;
     justify-content: space-around;
 }
-
 
 /* ---End of Flexbox Items--- */
 
@@ -185,8 +178,8 @@ a:hover i {
     transform-origin: bottom left;
 }
 
-
 /* ---End of Header--- */
+
 
 /* 4. ---Characters--- */
 
@@ -212,10 +205,8 @@ a:hover i {
 }
 
 .hidden-char {
-    visibility: hidden;
+    opacity: 0;
 }
-
-
 
 .button-style {
     background-color: #f7f7f7;
@@ -231,14 +222,10 @@ a:hover i {
     border-radius: 50%;
 }
 
-.girl-box {
+.char-box {
     width: 100%;
     height: 80%;
     display: block;
-}
-
-#girl {
-    visibility: none;
 }
 
 .track-ref {
@@ -251,8 +238,8 @@ a:hover i {
 
 /* ---End of Characters--- */
 
-/* 5. ---Instruments--- */
 
+/* 5. ---Instruments--- */
 
 .instruments-image {
     width: 150px;
@@ -261,7 +248,8 @@ a:hover i {
 
 .instruments-box {
     background-color: rgb(255, 255, 255);
-    border: solid 1px;
+    border: solid 1px rgb(204, 204, 204);
+    border-radius: 10%;
     padding: 2px;
     width: 130px;
     height: 130px;
@@ -277,7 +265,6 @@ a:hover i {
 
 /* 6. ---Footer--- */
 
-
 footer {
     margin-top: 200px;
     background-color: #E60012;
@@ -286,6 +273,7 @@ footer {
 }
 
 /* ---End of Footer--- */
+
 
 /* 7. ---Modal--- */
 
@@ -350,6 +338,5 @@ footer {
     text-decoration: none;
     cursor: pointer;
 }
-
 
 /* ---End of Modal--- */

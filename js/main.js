@@ -26,9 +26,33 @@ function handleDragOver(e) {
 function handleDrop(e) {
     e.preventDefault();
     this.appendChild(draggedInstrument);
-    changeVisibility("image" + draggedInstrument.parentNode.id, true);
+    fadeInCharacter(draggedInstrument.parentNode.id);
     changeVisibility("instrument" + draggedInstrument.parentNode.id, false);
     playAudio(draggedInstrument.parentNode.id);
+}
+
+function fadeInCharacter(id) {
+    let character = document.getElementById("image" + id);
+    let opacity = 0;
+    let fadeIn = setInterval(() => {
+        if (opacity >= 1) {
+            clearInterval(fadeIn);
+        } else {
+            character.style.opacity = opacity;
+            opacity += 0.01;
+        }
+    }, 10);
+}
+
+function fadeOutCharacter(id) {
+    let character = document.getElementById("image" + id);
+    let fadeOut = setInterval(() => {
+        if (character.style.opacity > 0) {
+            character.style.opacity -= 0.01;
+        } else {
+            clearInterval(fadeOut);
+        }
+    }, 10);
 }
 
 function changeVisibility(id, show) {
@@ -49,7 +73,7 @@ function stopAudio(id) {
     let audio = document.getElementById("audio" + id);
     audio.pause();
     audio.currentTime = 0;
-    changeVisibility("image" + id, false);
+    fadeOutCharacter(id);
     let instrument = document.getElementById("instrument" + id),
         instrumentBox = document.getElementById("instrumentbox" + id);
     changeVisibility("instrument" + id, true);
@@ -81,10 +105,9 @@ instruments.forEach(instrument => instrument.addEventListener("dragstart", handl
 dropZones.forEach(zone => zone.addEventListener("dragover", handleDragOver));
 dropZones.forEach(zone => zone.addEventListener("drop", handleDrop));
 
+// Modal Functionality
 
-// modal  information functionality
-
-// Get the modal
+// Information Modal
 const modalInfo = document.getElementById("modalInfo"),
     btnInfo = document.getElementById("btn-info"),
     spanInfo = document.getElementsByClassName("closeInfo")[0];
@@ -106,7 +129,7 @@ window.onclick = function (event) {
     }
 }
 
-// modal Instructions
+// Instructions Modal
 const modalInstructions = document.getElementById("modalInstructions"),
     btnInstructions = document.getElementById("btn-instructions"),
     spanInstructions = document.getElementsByClassName("closeInstructions")[0];
@@ -128,7 +151,7 @@ window.onclick = function (event) {
     }
 }
 
-// modal Credits
+// Credits Modal
 const modalCred = document.getElementById("modalCred"),
     btnCred = document.getElementById("btn-cred"),
     spanCred = document.getElementsByClassName("closeCred")[0];
