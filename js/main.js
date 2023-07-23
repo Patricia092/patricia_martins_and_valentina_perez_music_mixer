@@ -10,6 +10,7 @@ const characterSpace = document.querySelector(".characters-space"),
     volSlider = document.querySelector('.volumeControl');
 
 let draggedInstrument;
+let isFirstCharacter = true;
 
 //Functions
 
@@ -50,8 +51,8 @@ function stopAudio(id) {
     audio.currentTime = 0;
     changeVisibility("image" + id, false);
     let instrument = document.getElementById("instrument" + id),
-    instrumentBox = document.getElementById("instrumentbox" + id);
-    changeVisibility("instrument" + draggedInstrument.parentNode.id, true);
+        instrumentBox = document.getElementById("instrumentbox" + id);
+    changeVisibility("instrument" + id, true);
     instrumentBox.appendChild(instrument);
 }
 
@@ -63,6 +64,16 @@ function pauseAudio(id) {
 function setVol(e, id) {
     let audio = document.getElementById("audio" + id);
     audio.volume = (e.value / 100);
+}
+
+function showTrackRef(element) {
+    const trackRef = element.querySelector(".track-ref");
+    trackRef.classList.remove("hide");
+}
+
+function hideTrackRef(element) {
+    const trackRef = element.querySelector(".track-ref");
+    trackRef.classList.add("hide");
 }
 
 // Event Listeners
