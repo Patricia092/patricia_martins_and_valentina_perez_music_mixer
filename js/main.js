@@ -107,68 +107,51 @@ dropZones.forEach(zone => zone.addEventListener("drop", handleDrop));
 
 // Modal Functionality
 
-// Information Modal
-const modalInfo = document.getElementById("modalInfo"),
-    btnInfo = document.getElementById("btn-info"),
-    spanInfo = document.getElementsByClassName("closeInfo")[0];
-
-// When the user clicks the button, open the modal 
-btnInfo.onclick = function () {
-    modalInfo.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-spanInfo.onclick = function () {
-    modalInfo.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-    if (event.target == modalInfo) {
-        modalInfo.style.display = "none";
+// Function to toggle the display of a modal with a given class
+function toggleModal(className) {
+    const modal = document.querySelector(`.${className}`);
+    if (modal) {
+        modal.style.display = modal.style.display === "block" ? "none" : "block";
     }
 }
 
-// Instructions Modal
-const modalInstructions = document.getElementById("modalInstructions"),
-    btnInstructions = document.getElementById("btn-instructions"),
-    spanInstructions = document.getElementsByClassName("closeInstructions")[0];
-
-// When the user clicks the button, open the modal 
-btnInstructions.onclick = function () {
-    modalInstructions.style.display = "block";
+// Function to close all modals
+function closeAllModals() {
+    document.querySelectorAll(".modal").forEach((modal) => {
+        modal.style.display = "none";
+    });
 }
 
-// When the user clicks on <span> (x), close the modal
-spanInstructions.onclick = function () {
-    modalInstructions.style.display = "none";
-}
+// Modals
+const btnInfo = document.getElementsByClassName("btn-info");
+const btnInstructions = document.getElementsByClassName("btn-instructions");
+const btnCred = document.getElementsByClassName("btn-cred");
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-    if (event.target == modalInstructions) {
-        modalInstructions.style.display = "none";
+function addEventListenersToButtons(buttons, className) {
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", () => {
+            toggleModal(className);
+        });
     }
 }
 
-// Credits Modal
-const modalCred = document.getElementById("modalCred"),
-    btnCred = document.getElementById("btn-cred"),
-    spanCred = document.getElementsByClassName("closeCred")[0];
+addEventListenersToButtons(btnInfo, "modalInfo");
+addEventListenersToButtons(btnInstructions, "modalInstructions");
+addEventListenersToButtons(btnCred, "modalCred");
 
-// When the user clicks the button, open the modal 
-btnCred.onclick = function () {
-    modalCred.style.display = "block";
-}
+// Close modals when clicking on close buttons
+document.querySelectorAll(".closeInfo, .closeInstructions, .closeCred").forEach((closeButton) => {
+    closeButton.addEventListener("click", () => {
+        closeAllModals();
+    });
+});
 
-// When the user clicks on <span> (x), close the modal
-spanCred.onclick = function () {
-    modalCred.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
+// Close modals when clicking outside of them
 window.onclick = function (event) {
-    if (event.target == modalInfo) {
-        modalCred.style.display = "none";
-    }
-}
+    const modals = document.querySelectorAll(".modal");
+    modals.forEach((modal) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+};
