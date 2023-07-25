@@ -52,26 +52,10 @@ html {
   justify-content: center;
 }
 
-.instruments-box {
-  background-color: rgb(255, 255, 255);
-  border: solid 1px rgb(204, 204, 204);
-  border-radius: 10%;
-  padding: 2px;
-  width: 110px;
-  height: 110px;
-  margin-top: 15px;
-  margin-right: 10px;
-  display: block;
-  padding: 8px;
-  cursor: pointer;
-}
-
-
 .instruments-image {
   width: 120px;
   height: 90px;
 }
-
 
 .bowser-size {
   width: 85%;
@@ -89,7 +73,7 @@ html {
 }
 
 .luigi-size {
-  width: 70%;
+  width: 60%;
   height: 200px;
 }
 
@@ -105,7 +89,7 @@ html {
   transition: opacity .2s;
   display: block;
   margin: auto;
-  width: 80%;
+  width: 70%;
 }
 
 .track-ref {
@@ -348,12 +332,10 @@ input[type="range"] {
     transition: opacity .2s;
     display: block;
     margin: auto;
-    width: 80%;
-  }
-
-  .track-ref {
+    width: 90%;
     display: none;
   }
+
 
   .characters-box:hover .track-ref {
     display: block;
@@ -612,6 +594,17 @@ input[type="range"] {
     padding: 20px;
     text-align: center;
     margin-top: 50px;
+  }
+
+  .track-ref {
+    padding: 6px 0 6px 0;
+    background-color: #ffffff;
+    border-radius: 10px;
+    transition: opacity .2s;
+    display: block;
+    margin: auto;
+    width: 70%;
+    display: none;
   }
 
   .bowser-size {

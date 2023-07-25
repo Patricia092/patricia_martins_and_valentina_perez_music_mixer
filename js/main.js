@@ -12,6 +12,7 @@ const characterSpace = document.querySelector(".characters-space"),
 let draggedInstrument;
 let isFirstCharacter = true;
 
+
 //Functions
 
 function handleStartDrag() {
@@ -25,10 +26,15 @@ function handleDragOver(e) {
 
 function handleDrop(e) {
     e.preventDefault();
-    this.appendChild(draggedInstrument);
-    fadeInCharacter(draggedInstrument.parentNode.id);
-    changeVisibility("instrument" + draggedInstrument.parentNode.id, false);
-    playAudio(draggedInstrument.parentNode.id);
+    const characterId = this.getAttribute("data-character-id");
+    const instrumentCharacterId = draggedInstrument.getAttribute("data-character-id");
+
+    if (characterId === instrumentCharacterId) {
+        this.appendChild(draggedInstrument);
+        fadeInCharacter(characterId);
+        changeVisibility("instrument" + characterId, false);
+        playAudio(characterId);
+    }
 }
 
 function fadeInCharacter(id) {
