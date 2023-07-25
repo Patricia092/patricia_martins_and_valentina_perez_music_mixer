@@ -96,20 +96,12 @@ function setVol(e, id) {
     audio.volume = (e.value / 100);
 }
 
-function showTrackRef(element) {
-    const trackRef = element.querySelector(".track-ref");
-    trackRef.classList.remove("hide");
-}
-
-function hideTrackRef(element) {
-    const trackRef = element.querySelector(".track-ref");
-    trackRef.classList.add("hide");
-}
 
 // Event Listeners
 instruments.forEach(instrument => instrument.addEventListener("dragstart", handleStartDrag));
 dropZones.forEach(zone => zone.addEventListener("dragover", handleDragOver));
 dropZones.forEach(zone => zone.addEventListener("drop", handleDrop));
+
 
 // Modal Functionality
 
@@ -141,6 +133,18 @@ function addEventListenersToButtons(buttons, className) {
     }
 }
 
+// Close modals when clicking outside of them
+window.onclick = function (event) {
+    const modals = document.querySelectorAll(".modal");
+    modals.forEach((modal) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+};
+
+// Event Listeners
+
 addEventListenersToButtons(btnInfo, "modalInfo");
 addEventListenersToButtons(btnInstructions, "modalInstructions");
 addEventListenersToButtons(btnCred, "modalCred");
@@ -152,12 +156,3 @@ document.querySelectorAll(".closeInfo, .closeInstructions, .closeCred").forEach(
     });
 });
 
-// Close modals when clicking outside of them
-window.onclick = function (event) {
-    const modals = document.querySelectorAll(".modal");
-    modals.forEach((modal) => {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    });
-};
