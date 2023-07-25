@@ -307,6 +307,7 @@ input[type=checkbox]:checked~#overlay-button span:after {
 #overlay ul li a:hover {
     color: #0057B8;
 }
+
 /* ---End of Mobile Menu--- */
 
 
@@ -341,8 +342,6 @@ input[type=checkbox]:checked~#overlay-button span:after {
 }
 
 .instruments-box {
-    /*background-color: rgb(255, 255, 255);*/
-    border: solid 1px rgb(204, 204, 204);
     border-radius: 10%;
     padding: 2px;
     width: 130px;
@@ -400,9 +399,12 @@ input[type=checkbox]:checked~#overlay-button span:after {
 /* 6. ---Footer--- */
 
 footer {
-    margin-top: 200px;
     background-color: #E60012;
+    height: 220px;
+    margin-top: 100px;
+    margin: auto auto;
     bottom: 0;
+    position: relative;
     width: 100%;
 }
 
@@ -474,4 +476,3 @@ footer {
 }
 
 /* ---End of Modal--- */
-
