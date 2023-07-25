@@ -115,6 +115,9 @@ html {
 
 .box-bgimage {
   height: 570px;
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: #caf1ff;
   color: white;
   border-radius: 5px;

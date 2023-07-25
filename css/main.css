@@ -323,7 +323,6 @@ input[type=checkbox]:checked~#overlay-button span:after {
 .volumeControl {
     margin: 2% 0 0 0;
     display: inline;
-
 }
 
 .hidden-char {
@@ -342,7 +341,7 @@ input[type=checkbox]:checked~#overlay-button span:after {
 }
 
 .instruments-box {
-    background-color: rgb(255, 255, 255);
+    /*background-color: rgb(255, 255, 255);*/
     border: solid 1px rgb(204, 204, 204);
     border-radius: 10%;
     padding: 2px;
@@ -353,6 +352,46 @@ input[type=checkbox]:checked~#overlay-button span:after {
     display: block;
     padding: 8px;
     cursor: pointer;
+}
+
+#instrumentboxdiv1 {
+    background-image: url("../images/mario-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(29, 29, 29, 0.104);
+    background-blend-mode: multiply;
+}
+
+#instrumentboxdiv2 {
+    background-image: url("../images/luigi-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(29, 29, 29, 0.104);
+    background-blend-mode: multiply;
+}
+
+#instrumentboxdiv3 {
+    background-image: url("../images/peach-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(29, 29, 29, 0.104);
+    background-blend-mode: multiply;
+}
+
+#instrumentboxdiv4 {
+    background-image: url("../images/toad-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(238, 238, 238, 0.355);
+    background-blend-mode: lighten;
+}
+
+#instrumentboxdiv5 {
+    background-image: url("../images/bowser-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(29, 29, 29, 0.206);
+    background-blend-mode: multiply;
 }
 
 /* ---End of Instruments--- */
